@@ -50,7 +50,7 @@ app.get('/citations', (req, res) => {
     const { content } = req.body;
     db.query('INSERT INTO CITATIONS (CONTENT) VALUES (?)', [content], (err, result) => {
       if (err) throw err;
-      res.json({ message: 'User added successfully', id: result.insertId });
+      res.json({ message: 'Cite added successfully', id: result.insertId });
     });
   });
   
